@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SemexterWorkWebAppAstrology:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SemexterWorkWebAppAstrology_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="SemexterWorkWebAppAstrology/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SemexterWorkWebAppAstrology" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
