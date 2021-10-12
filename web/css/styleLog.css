@@ -22,7 +22,7 @@ body {
 .box,
 .regbox{
     width: 400px;
-    height: 650px;
+    height: 370px;
     background: #2f3542;
     margin: 0;
     padding: 30px;
@@ -40,9 +40,9 @@ body {
     padding: 0;
     width: 150px;
     height: 150px;
-    top: -22%;
+    top: -27%;
     position: absolute;
-    left: calc(70% - 75px);
+    left: calc(50% - 75px);
     border-radius: 50%;
 }
 

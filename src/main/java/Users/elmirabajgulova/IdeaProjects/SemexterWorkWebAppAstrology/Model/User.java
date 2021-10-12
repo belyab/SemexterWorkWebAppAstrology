@@ -1,4 +1,4 @@
-package Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology;
+package Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Model;
 
 import java.sql.Date;
 import java.sql.Time;
@@ -9,29 +9,29 @@ public class User {
     String password;
     String first_name;
     String last_name;
-    Date birthDate;
-    Time birthTime;
+    Date birth_date;
+    Time birth_time;
 
     public User() {
     }
 
-    public User(int user_profile_id, String login, String password, String first_name, String last_name, Date birthDate, Time birthTime) {
+    public User(int user_profile_id, String login, String password, String first_name, String last_name, Date birth_date, Time birth_time) {
         this.user_profile_id = user_profile_id;
         this.login = login;
         this.password = password;
         this.first_name = first_name;
         this.last_name = last_name;
-        this.birthDate = birthDate;
-        this.birthTime = birthTime;
+        this.birth_date = birth_date;
+        this.birth_time = birth_time;
     }
 
-    public User(String login, String password, String first_name, String last_name, Date birthDate, Time birthTime) {
+    public User(String login, String password, String first_name, String last_name, Date birth_date, Time birth_time) {
         this.login = login;
         this.password = password;
         this.first_name = first_name;
         this.last_name = last_name;
-        this.birthDate = birthDate;
-        this.birthTime = birthTime;
+        this.birth_date = birth_date;
+        this.birth_time = birth_time;
     }
 
     public User(String login, String password, String first_name, String last_name, String birth_date, String birth_time) {
@@ -77,19 +77,20 @@ public class User {
         this.last_name = last_name;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
+    public Date getBirth_date() {
+        return birth_date;
     }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+    public void setBirth_date(Date birth_date) {
+        this.birth_date = birth_date;
     }
 
-    public Time getBirthTime() {
-        return birthTime;
+    public Time getBirth_time() {
+        return birth_time;
     }
 
-    public void setBirthTime(Time birthTime) {
-        this.birthTime = birthTime;
+    public void setBirth_time(Time birth_time) {
+        this.birth_time = birth_time;
     }
 }
+
