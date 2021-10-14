@@ -20,7 +20,7 @@
     <h1>Register Account</h1>
     <form action="RegisterServlet" method="post">
       <p> Login</p>
-      <input type="text" placeholder="Login" name="name" required>
+      <input type="text" placeholder="Login" name="login" required>
       <p>Password</p>
       <input type="password" placeholder="Password" name="password" required>
       <p>FirstName</p>

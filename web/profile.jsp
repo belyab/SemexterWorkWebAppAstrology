@@ -18,7 +18,7 @@
 <body>
 <h1>Welcome, <%= user.getFirst_name() %></h1>
 <h3>Your Account ID: <%= user.getUser_profile_id() %> </h3>
-<h3>Your Email: <%= user.getLogin() %> </h3>
+<h3>Your Login: <%= user.getLogin() %> </h3>
 <h3>Your Password: <%= user.getPassword() %></h3>
 <button><a href="LogoutServlet">Log Out</a></button>
 </body>
