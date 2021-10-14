@@ -31,9 +31,7 @@
 <%--      <p><input type="radio" name="gender" id="male" value="male"><label for="male">Male</label>--%>
 <%--        <input type="radio" name="gender" id="female" value="female"><label for="female">Female</label></p>--%>
       <p>BirthDate</p>
-      <input type="date" placeholder="Birth date" name="birth_date" required>
-      <p>BirthTime</p>
-      <input type="time" placeholder="Birth time" name="birth_time" required>
+      <input type="text" placeholder="Birth date" name="birth_date" required>
       <input type="submit" value="Register">
       <a href="index.jsp">Already have Account?</a>
     </form>

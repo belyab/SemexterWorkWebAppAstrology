@@ -25,7 +25,6 @@
         <p>Password</p>
         <input type="password" placeholder="Password" name="password" required>
         <input type="submit" value="Login">
-        <a href="#">Forget Password?</a><br>
         <a href="registration.jsp">Create New Account</a>
       </form>
     </div>

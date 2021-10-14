@@ -24,10 +24,10 @@ public class RegisterServlet extends HttpServlet {
             String password = request.getParameter("password");
             String first_name = request.getParameter("first_name");
             String last_name = request.getParameter("last_name");
-            Date birth_date = Date.valueOf(request.getParameter("birth_date"));
-            Time birth_time = Time.valueOf(request.getParameter("birth_time"));
+            String birth_date = request.getParameter("birth_date");
 
-            User userModel = new User(login,password,first_name,last_name,birth_date,birth_time);
+
+            User userModel = new User(login,password,first_name,last_name,birth_date);
 
             UserDao regUser = new UserDao(ConnectionPro.getConnection());
             if (regUser.saveUser(userModel)) {
@@ -36,7 +36,7 @@ public class RegisterServlet extends HttpServlet {
                 String errorMessage = "User Available";
                 HttpSession regSession = request.getSession();
                 regSession.setAttribute("RegError", errorMessage);
-                response.sendRedirect("register.jsp");
+                response.sendRedirect("registration.jsp");
             }
         }
     }

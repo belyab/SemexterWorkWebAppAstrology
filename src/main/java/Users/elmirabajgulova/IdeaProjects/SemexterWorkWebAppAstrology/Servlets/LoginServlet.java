@@ -10,7 +10,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "JavaServlet", value = "/JavaServlet")
+@WebServlet(name = "LoginServlet", value = "/LoginServlet")
 public class LoginServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet {
             if(user!=null){
                 HttpSession session = request.getSession();
                 session.setAttribute("logUser", user);
-                response.sendRedirect("welcome.jsp");
+                response.sendRedirect("profile.jsp");
             }else{
                 out.println("user not found");
             }
