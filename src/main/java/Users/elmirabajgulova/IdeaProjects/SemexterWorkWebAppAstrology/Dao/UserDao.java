@@ -16,7 +16,7 @@ public class UserDao {
         boolean set = false;
         try{
 
-            String query = "insert into AstrologyWebAppDatabase.user_profile(login,password,first_name,last_name,birth_date) values(?,?,?,?,?)";
+            String query = "insert into user_profile(login,password,first_name,last_name,birth_date) values(?,?,?,?,?)";
 
             PreparedStatement pt = this.con.prepareStatement(query);
             pt.setString(1, user.getLogin());
