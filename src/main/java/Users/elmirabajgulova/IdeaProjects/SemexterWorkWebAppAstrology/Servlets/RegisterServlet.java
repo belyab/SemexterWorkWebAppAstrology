@@ -24,14 +24,14 @@ public class RegisterServlet extends HttpServlet {
             String password = request.getParameter("password");
             String first_name = request.getParameter("first_name");
             String last_name = request.getParameter("last_name");
-            String birth_date = request.getParameter("birth_date");
+            Date birth_date = Date.valueOf(request.getParameter("birth_date"));
 
 
             User userModel = new User(login,password,first_name,last_name,birth_date);
 
             UserDao regUser = new UserDao(ConnectionPro.getConnection());
             if (regUser.saveUser(userModel)) {
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("login.jsp");
             } else {
                 String errorMessage = "User Available";
                 HttpSession regSession = request.getSession();

@@ -1,13 +1,40 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="SemexterWorkWebAppAstrology:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/SemexterWorkWebAppAstrology_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/SemexterWorkWebAppAstrology-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>SemexterWorkWebAppAstrology</module>
+        <packaging>war</packaging>
+        <unpackNestedArchives>false</unpackNestedArchives>
+      </options>
+    </properties>
     <root id="root">
-      <element id="javaee-facet-resources" facet="SemexterWorkWebAppAstrology/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="SemexterWorkWebAppAstrology" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.webjars:bootstrap:4.5.3" />
+          <element id="library" level="project" name="Maven: org.webjars:jquery:3.5.1" />
+          <element id="library" level="project" name="Maven: org.webjars:popper.js:1.16.0" />
+          <element id="library" level="project" name="Maven: com.squareup.okhttp3:okhttp:4.9.1" />
+          <element id="library" level="project" name="Maven: com.squareup.okio:okio:2.8.0" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.4.10" />
+          <element id="library" level="project" name="Maven: org.jetbrains:annotations:13.0" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+          <element id="library" level="project" name="Maven: org.freemarker:freemarker:2.3.31" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.7.32" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:42.2.24" />
+          <element id="library" level="project" name="Maven: org.checkerframework:checker-qual:3.5.0" />
+        </element>
       </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/SemexterWorkWebAppAstrology-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="SemexterWorkWebAppAstrology/web/Web" />
     </root>
   </artifact>
 </component>

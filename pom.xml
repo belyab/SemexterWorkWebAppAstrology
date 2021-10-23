@@ -7,6 +7,7 @@
     <groupId>org.example</groupId>
     <artifactId>SemexterWorkWebAppAstrology</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.source>14</maven.compiler.source>
@@ -14,6 +15,12 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>4.5.3</version>
+        </dependency>
+
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>

@@ -8,7 +8,7 @@ public class ConnectionPro {
     public static Connection getConnection(){
         try{
             Class.forName("org.postgresql.Driver");
-            con=DriverManager.getConnection("jdbc:postgresql://localhost:5432/AstrologyWebAppDatabase","postgres","postgres");
+            con=DriverManager.getConnection("jdbc:postgresql://localhost:5433/AstrologyWebAppDatabase","postgres","postgres");
 
         }catch(Exception e){
             e.printStackTrace();

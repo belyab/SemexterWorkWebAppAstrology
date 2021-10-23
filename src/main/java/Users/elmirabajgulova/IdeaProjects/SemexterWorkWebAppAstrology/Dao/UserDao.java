@@ -16,14 +16,14 @@ public class UserDao {
         boolean set = false;
         try{
 
-            String query = "insert into user_profile(login,password,first_name,last_name,birth_date) values(?,?,?,?,?)";
+            String query = "insert into user_profile(login,password,first_name,last_name,birth_date) values(?,?,?,?,?::date )";
 
             PreparedStatement pt = this.con.prepareStatement(query);
             pt.setString(1, user.getLogin());
             pt.setString(2, user.getPassword());
             pt.setString(3, user.getFirst_name());
             pt.setString(4, user.getLast_name());
-            pt.setString(5, user.getBirth_date());
+            pt.setString(5, String.valueOf(user.getBirth_date()));
 
             pt.executeUpdate();
             set = true;
