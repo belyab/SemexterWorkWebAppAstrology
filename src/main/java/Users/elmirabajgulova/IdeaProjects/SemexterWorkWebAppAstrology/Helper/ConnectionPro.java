@@ -1,4 +1,4 @@
-package Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology;
+package Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Helper;
 import java.sql.*;
 
 

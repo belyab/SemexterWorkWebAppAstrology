@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styleMainPage.css">
+    <link rel="stylesheet" href="css/styleHome.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -17,10 +17,10 @@
 <body>
 <section class="header">
     <nav>
-        <a href="mainPage.jsp"><img src="css/img/Astologo_PNG_white.png"></a>
+        <a href="home.jsp"><img src="css/img/Astologo_PNG_white.png"></a>
         <div class="nav-links">
             <ul>
-                <li><a href="">HOME</a></li>
+                <li><a href="home.jsp">HOME</a></li>
                 <li><a href="horoscope.jsp">HOROSCOPE</a></li>
                 <li><a href="astroservices.jsp">ASTROSERVICES</a></li>
                 <li><a href="blog.jsp">BLOG</a></li>
@@ -32,7 +32,7 @@
     <div class="text-box">
         <h1>WELCOME TO ASTRLOGO</h1>
         <p>Know yourself together with us. The star map will help you build the right one and change your destiny.</p>
-        <a href="" class="hero-btn">LOGIN</a>
+        <a href="login.jsp" class="hero-btn">LOGIN</a>
     </div>
 
 </section>
@@ -64,25 +64,25 @@
     
     <div class="row">
         <div class="signs-col">
-            <img src="css/img/signs/icons8-aquarius-100.png">
+            <img src="css/img/signsImages/icons8-aquarius-100.png">
             <div class="layer">
                 <h3>AQUARIUS</h3>
             </div>
         </div>
         <div class="signs-col">
-            <img src="css/img/signs/icons8-aries-100.png">
+            <img src="css/img/signsImages/icons8-aries-100.png">
             <div class="layer">
                 <h3>ARIES</h3>
             </div>
         </div>
         <div class="signs-col">
-            <img src="css/img/signs/icons8-cancer-100.png">
+            <img src="css/img/signsImages/icons8-cancer-100.png">
             <div class="layer">
                 <h3>CANCER</h3>
             </div>
         </div>
         <div class="signs-col">
-            <img src="css/img/signs/icons8-capricorn-100.png">
+            <img src="css/img/signsImages/icons8-capricorn-100.png">
             <div class="layer">
                 <h3>CAPRICORN</h3>
             </div>
@@ -90,25 +90,25 @@
     </div>
         <div class="row">
         <div class="signs-col">
-            <img src="css/img/signs/icons8-gemini-100.png">
+            <img src="css/img/signsImages/icons8-gemini-100.png">
             <div class="layer">
                 <h3>GEMINI</h3>
             </div>
         </div>
         <div class="signs-col">
-            <img src="css/img/signs/icons8-leo-100.png">
+            <img src="css/img/signsImages/icons8-leo-100.png">
             <div class="layer">
                 <h3>LEO</h3>
             </div>
         </div>
             <div class="signs-col">
-                <img src="css/img/signs/icons8-libra-100.png">
+                <img src="css/img/signsImages/icons8-libra-100.png">
                 <div class="layer">
                     <h3>LIBRA</h3>
                 </div>
             </div>
             <div class="signs-col">
-                <img src="css/img/signs/icons8-pisces-100.png">
+                <img src="css/img/signsImages/icons8-pisces-100.png">
                 <div class="layer">
                     <h3>PISCES</h3>
                 </div>
@@ -116,25 +116,25 @@
         </div>
         <div class="row">
         <div class="signs-col">
-            <img src="css/img/signs/icons8-sagittarius-100.png">
+            <img src="css/img/signsImages/icons8-sagittarius-100.png">
             <div class="layer">
                 <h3>SAGITTARIUS</h3>
             </div>
         </div>
         <div class="signs-col">
-            <img src="css/img/signs/icons8-scorpio-100.png">
+            <img src="css/img/signsImages/icons8-scorpio-100.png">
             <div class="layer">
                 <h3>SCORPIO</h3>
             </div>
         </div>
         <div class="signs-col">
-            <img src="css/img/signs/icons8-taurus-100.png">
+            <img src="css/img/signsImages/icons8-taurus-100.png">
             <div class="layer">
                 <h3>TAURUS</h3>
             </div>
         </div>
         <div class="signs-col">
-            <img src="css/img/signs/icons8-virgo-100.png">
+            <img src="css/img/signsImages/icons8-virgo-100.png">
             <div class="layer">
                 <h3>VIRGO</h3>
             </div>

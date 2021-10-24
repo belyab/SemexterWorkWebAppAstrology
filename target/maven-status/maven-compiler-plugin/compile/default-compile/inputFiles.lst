@@ -2,5 +2,6 @@
 /Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Servlets/RegisterServlet.java
 /Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Model/User.java
 /Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Servlets/LoginServlet.java
+/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Servlets/HomeServlet.java
 /Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Servlets/LogoutServlet.java
-/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/ConnectionPro.java
+/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Helper/ConnectionPro.java

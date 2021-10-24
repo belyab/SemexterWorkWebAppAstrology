@@ -1,6 +1,6 @@
 package Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Servlets;
 
-import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.ConnectionPro;
+import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Helper.ConnectionPro;
 import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Model.User;
 import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Dao.UserDao;
 
@@ -19,17 +19,30 @@ public class LoginServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             //fetch data from login form
 
-            String logLogin = request.getParameter("login");
-            String logPassword = request.getParameter("password");
+            String login = request.getParameter("login");
+            String password = request.getParameter("password");
+            String remember = request.getParameter("remember");
 
-            UserDao db =  new UserDao(ConnectionPro.getConnection());
-            User user = db.logUser(logLogin, logPassword);
+            UserDao db = new UserDao(ConnectionPro.getConnection());
+            User user = db.logUser(login, password);
 
-            if(user!=null){
-                HttpSession session = request.getSession();
-                session.setAttribute("logUser", user);
-                response.sendRedirect("profile.jsp");
-            }else{
+            if (user != null) {
+                if (request.getParameter("remember") != null) {
+                    Cookie cLogin = new Cookie("cookuser", login.trim());
+                    Cookie cPassword = new Cookie("cookpass", password.trim());
+                    Cookie cRemember = new Cookie("cookrem", remember.trim());
+                    cLogin.setMaxAge(60 * 60 * 24 * 15);// 15 days
+                    cPassword.setMaxAge(60 * 60 * 24 * 15);
+                    cRemember.setMaxAge(60 * 60 * 24 * 15);
+                    response.addCookie(cLogin);
+                    response.addCookie(cPassword);
+                    response.addCookie(cRemember);
+                }
+                HttpSession httpSession = request.getSession();
+                httpSession.setAttribute("sessuser", login.trim());
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("profile.jsp");
+                requestDispatcher.forward(request, response);
+            } else {
                 out.println("user not found");
             }
         }

@@ -1,6 +1,6 @@
 package Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Servlets;
 
-import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.ConnectionPro;
+import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Helper.ConnectionPro;
 import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Model.User;
 import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Dao.UserDao;
 
@@ -10,7 +10,6 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
-import java.sql.Time;
 
 @WebServlet(name = "RegisterServlet", value = "/RegisterServlet")
 public class RegisterServlet extends HttpServlet {

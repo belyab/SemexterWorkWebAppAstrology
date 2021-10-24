@@ -1,5 +1,6 @@
 package Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Dao;
 
+import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Helper.ConnectionPro;
 import Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Model.User;
 
 import java.sql.*;
@@ -9,6 +10,39 @@ public class UserDao {
 
     public UserDao(Connection con) {
         this.con = con;
+    }
+    private final Connection connection = ConnectionPro.getConnection();
+
+    public User get(String login) {
+        try {
+            Statement statement = connection.createStatement();
+            String sql = "SELECT * FROM user_profile where login = \'" + login + "\'";
+            return executeQuery(statement, sql);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
+
+    private User executeQuery(Statement statement, String sql) {
+        try {
+            ResultSet resultSet = statement.executeQuery(sql);
+            if (resultSet.next()) {
+                return new User(
+                        resultSet.getInt("id"),
+                        resultSet.getString("login"),
+                        resultSet.getString("password"),
+                        resultSet.getString("first_name"),
+                        resultSet.getString("last_name"),
+                        resultSet.getDate("birth_date")
+                );
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     //for register user
