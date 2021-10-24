@@ -17,14 +17,14 @@
 <body>
 <section class="header">
     <nav>
-        <a href="mainPage.jsp"><img src="css/img/logo_ru.png"></a>
+        <a href="mainPage.jsp"><img src="css/img/Astologo_PNG_white.png"></a>
         <div class="nav-links">
             <ul>
                 <li><a href="">HOME</a></li>
-                <li><a href="">HOROSCOPE</a></li>
-                <li><a href="">ASTROSERVICES</a></li>
-                <li><a href="">BLOG</a></li>
-                <li><a href="">LOGIN</a></li>
+                <li><a href="horoscope.jsp">HOROSCOPE</a></li>
+                <li><a href="astroservices.jsp">ASTROSERVICES</a></li>
+                <li><a href="blog.jsp">BLOG</a></li>
+                <li><a href="login.jsp">LOGIN</a></li>
             </ul>
         </div>
     </nav>

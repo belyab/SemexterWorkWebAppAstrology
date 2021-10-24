@@ -1,189 +1,344 @@
-body {
-    background-image: url(../img/Moon-Header_web.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Arimo', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
     margin: 0;
     padding: 0;
-    height: 110%;
     box-sizing: border-box;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
+body{
+    background: #84889c;
 }
 
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/***********************************************
-       Account Registration and Login
-***********************************************/
-.box,
-.regbox{
+.registration_form{
+    background: #545871;
+    padding: 25px;
+    border-radius: 5px;
     width: 400px;
-    height: 570px;
-    background: #2f3542;
-    margin: 0;
-    padding: 30px;
-    top:60%;
-    left: 50%;
-    color: #fff;
-    border-radius: 15px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
 }
 
-.avatar {
-    margin: 0;
-    padding: 0;
-    width: 150px;
-    height: 150px;
-    top: -27%;
-    position: absolute;
-    left: calc(50% - 75px);
-    border-radius: 50%;
-}
-
-.box h1{
-    margin: 0;
-    padding: 30px;
+.registration_form .title{
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ebd0ce;
+    letter-spacing: 5px;
+    font-weight: 700;
 }
 
-.box p{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
+.form_wrap{
+    margin-top: 35px;
 }
 
-.box input {
-    width: 100%;
+.form_wrap .input_wrap{
     margin-bottom: 15px;
-    border-radius: 5px;
 }
 
-.box input[type="text"],
-.box input[type="password"] {
-    border: none;
-    background: transparent;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    height: 35px;
-    color: #fff;
-    font-size: 15px;
+.form_wrap .input_wrap:last-child{
+    margin-bottom: 0;
 }
 
-.box input[type="submit"] {
+.form_wrap .input_wrap label{
     display: block;
-    border: none;
+    margin-bottom: 3px;
+    color: #9597a6;
+}
+
+.form_wrap .input_grp{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_wrap .input_grp  input[type="text"]{
+    width: 165px;
+}
+
+.form_wrap  input[type="text"]{
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #9597a6;
+    padding: 10px;
     outline: none;
-    height: 35px;
-    background: #eccc68;
-    color: #000;
-    font-size: 20px;
-    border-radius: 20px;
 }
 
-.box input[type="submit"]:hover {
-    border: none;
+.form_wrap  input[type="text"]:focus{
+    border-color: #ebd0ce;
+}
+
+.form_wrap  input[type="password"]{
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #9597a6;
+    padding: 10px;
     outline: none;
-    height: 35px;
-    background: #ff6348;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: .3s ease-out;
 }
 
-.box a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    line-height: 20px;
+.form_wrap  input[type="password"]:focus{
+    border-color: #ebd0ce;
 }
 
-.box a:hover {
-    color: #eccc68;
+.form_wrap  input[type="date"]{
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #9597a6;
+    padding: 10px;
+    outline: none;
 }
 
+.form_wrap  input[type="date"]:focus{
+    border-color: #ebd0ce;
+}
 
+.form_wrap ul{
+    background: #fff;
+    padding: 8px 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+}
 
+.form_wrap ul li:first-child{
+    margin-right: 15px;
+}
 
-.regbox .avatar {
-    margin: 0;
-    padding: 0;
-    width: 150px;
-    height: 150px;
-    top: -22%;
+.form_wrap ul .radio_wrap{
+    position: relative;
+    margin-bottom: 0;
+}
+
+.form_wrap ul .radio_wrap .input_radio{
     position: absolute;
-    left: calc(50% - 75px);
-    border-radius: 50%;
+    top: 0;
+    right: 0;
+    opacity: 0;
 }
 
-.regbox h1 {
-    margin-top: 30px;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 30px;
+.form_wrap ul .radio_wrap span{
+    display: inline-block;
+    font-size: 14px;
+    padding: 3px 20px;
+    border-radius: 3px;
+    color: #545871;
 }
 
-.regbox p{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
+.form_wrap .input_radio:checked ~ span{
+    background: #ebd0ce;
 }
 
-.regbox input {
+.form_wrap .submit_btn{
     width: 100%;
-    margin-bottom: 15px;
-    border-radius: 5px;
-}
-
-.regbox input[type="text"],
-.regbox input[type="password"] {
-    border: none;
-    background: transparent;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    height: 35px;
-    color: #fff;
-    font-size: 15px;
-}
-
-.regbox input[type="submit"] {
-    display: block;
-    border: none;
-    outline: none;
-    height: 35px;
-    background: #eccc68;
-    color: #000;
-    font-size: 20px;
-    border-radius: 20px;
-}
-
-.regbox input[type="submit"]:hover {
-    border: none;
-    outline: none;
-    height: 35px;
-    background: #ff6348;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 20px;
+    background: #ebd0ce;
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     cursor: pointer;
-    transition: .3s ease-out;
 }
 
-.regbox a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    line-height: 20px;
+.form_wrap .submit_btn:hover{
+    background: #ffd5d2;
 }
 
-.regbox a:hover {
-    color: #eccc68;
-}
+
+
+
+
+/*body {*/
+/*    background-image: url(../img/Moon-Header_web.jpeg);*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    font-family: 'Arimo', sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    height: 110%;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*.container {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+
+/*!************************************************/
+/*       Account Registration and Login*/
+/************************************************!*/
+/*.box,*/
+/*.regbox{*/
+/*    width: 400px;*/
+/*    height: 570px;*/
+/*    background: #2f3542;*/
+/*    margin: 0;*/
+/*    padding: 30px;*/
+/*    top:60%;*/
+/*    left: 50%;*/
+/*    color: #fff;*/
+/*    border-radius: 15px;*/
+/*    position: absolute;*/
+/*    transform: translate(-50%, -50%);*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*.avatar {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    width: 150px;*/
+/*    height: 150px;*/
+/*    top: -27%;*/
+/*    position: absolute;*/
+/*    left: calc(50% - 75px);*/
+/*    border-radius: 50%;*/
+/*}*/
+
+/*.box h1{*/
+/*    margin: 0;*/
+/*    padding: 30px;*/
+/*    text-align: center;*/
+/*    font-size: 30px;*/
+/*}*/
+
+/*.box p{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.box input {*/
+/*    width: 100%;*/
+/*    margin-bottom: 15px;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*.box input[type="text"],*/
+/*.box input[type="password"] {*/
+/*    border: none;*/
+/*    background: transparent;*/
+/*    border-bottom: 1px solid #fff;*/
+/*    outline: none;*/
+/*    height: 35px;*/
+/*    color: #fff;*/
+/*    font-size: 15px;*/
+/*}*/
+
+/*.box input[type="submit"] {*/
+/*    display: block;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    height: 35px;*/
+/*    background: #eccc68;*/
+/*    color: #000;*/
+/*    font-size: 20px;*/
+/*    border-radius: 20px;*/
+/*}*/
+
+/*.box input[type="submit"]:hover {*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    height: 35px;*/
+/*    background: #ff6348;*/
+/*    color: #fff;*/
+/*    font-size: 20px;*/
+/*    border-radius: 20px;*/
+/*    cursor: pointer;*/
+/*    transition: .3s ease-out;*/
+/*}*/
+
+/*.box a {*/
+/*    text-decoration: none;*/
+/*    color: #fff;*/
+/*    font-size: 16px;*/
+/*    line-height: 20px;*/
+/*}*/
+
+/*.box a:hover {*/
+/*    color: #eccc68;*/
+/*}*/
+
+
+
+
+/*.regbox .avatar {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    width: 150px;*/
+/*    height: 150px;*/
+/*    top: -22%;*/
+/*    position: absolute;*/
+/*    left: calc(50% - 75px);*/
+/*    border-radius: 50%;*/
+/*}*/
+
+/*.regbox h1 {*/
+/*    margin-top: 30px;*/
+/*    padding: 20px 0;*/
+/*    text-align: center;*/
+/*    font-size: 30px;*/
+/*}*/
+
+/*.regbox p{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.regbox input {*/
+/*    width: 100%;*/
+/*    margin-bottom: 15px;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*.regbox input[type="text"],*/
+/*.regbox input[type="password"] {*/
+/*    border: none;*/
+/*    background: transparent;*/
+/*    border-bottom: 1px solid #fff;*/
+/*    outline: none;*/
+/*    height: 35px;*/
+/*    color: #fff;*/
+/*    font-size: 15px;*/
+/*}*/
+
+/*.regbox input[type="submit"] {*/
+/*    display: block;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    height: 35px;*/
+/*    background: #eccc68;*/
+/*    color: #000;*/
+/*    font-size: 20px;*/
+/*    border-radius: 20px;*/
+/*}*/
+
+/*.regbox input[type="submit"]:hover {*/
+/*    border: none;*/
+/*    outline: none;*/
+/*    height: 35px;*/
+/*    background: #ff6348;*/
+/*    color: #fff;*/
+/*    font-size: 20px;*/
+/*    border-radius: 20px;*/
+/*    cursor: pointer;*/
+/*    transition: .3s ease-out;*/
+/*}*/
+
+/*.regbox a {*/
+/*    text-decoration: none;*/
+/*    color: #fff;*/
+/*    font-size: 16px;*/
+/*    line-height: 20px;*/
+/*}*/
+
+/*.regbox a:hover {*/
+/*    color: #eccc68;*/
+/*}*/
