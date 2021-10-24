@@ -6,26 +6,34 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>JSP Page</title>
-    <title>Join Us</title>
-    <link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+    <title>Login</title>
     <link href="css/styleLog.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
-  <div class="container">
-    <div class="box">
-      <img class="avatar" src="css/img/logInImage.png">
-      <h1>Login Account</h1>
+  <div class="wrapper">
+    <div class="login_form">
+      <div class="title">
+        Login
+      </div>
       <form action="LoginServlet" method="post">
-        <p>Username</p>
-        <input type="text" placeholder="Login" name="login" required>
-        <p>Password</p>
-        <input type="password" placeholder="Password" name="password" required>
-        <input type="submit" value="Login">
-        <a href="registration.jsp">Create New Account</a>
+        <div class="form_wrap">
+          <div class="input_wrap">
+            <label>Login</label>
+            <input type="text" name="login" required>
+          </div>
+          <div class="input_wrap">
+            <label>Password</label>
+            <input type="password" name="password" required>
+          </div>
+          <div class="input_wrap">
+          <input type="submit" value="Login" class="submit_btn">
+          </div>
+          <a href="registration.jsp">Create New Account</a>
+
+        </div>
       </form>
     </div>
   </div>

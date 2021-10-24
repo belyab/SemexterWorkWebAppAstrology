@@ -12,6 +12,10 @@ body{
     background: #84889c;
 }
 
+a{
+    color: white;
+}
+
 .wrapper{
     min-height: 100vh;
     display: flex;
@@ -70,8 +74,8 @@ body{
     outline: none;
 }
 
-.form_wrap  input[type="text"]:focus{
-    border-color: #ebd0ce;
+.form_wrap .input_grp  input[type="password"]{
+    width: 165px;
 }
 
 .form_wrap  input[type="password"]{
