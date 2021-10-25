@@ -1,5 +1,8 @@
 Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Dao/UserDao.class
 Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Servlets/HomeServlet.class
+Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Helper/Validator.class
+Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Helper/Keys.class
+Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Filters/RegistrationFormFilter.class
 Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Helper/ConnectionPro.class
 Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Servlets/LogoutServlet.class
 Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Servlets/LoginServlet.class

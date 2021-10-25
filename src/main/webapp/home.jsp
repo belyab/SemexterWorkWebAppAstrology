@@ -16,18 +16,7 @@
 </head>
 <body>
 <section class="header">
-    <nav>
-        <a href="home.jsp"><img src="css/img/Astologo_PNG_white.png"></a>
-        <div class="nav-links">
-            <ul>
-                <li><a href="home.jsp">HOME</a></li>
-                <li><a href="horoscope.jsp">HOROSCOPE</a></li>
-                <li><a href="astroservices.jsp">ASTROSERVICES</a></li>
-                <li><a href="blog.jsp">BLOG</a></li>
-                <li><a href="login.jsp">LOGIN</a></li>
-            </ul>
-        </div>
-    </nav>
+    <%@include file="/WEB-INF/top_nav.jsp" %>
 
     <div class="text-box">
         <h1>WELCOME TO ASTRLOGO</h1>

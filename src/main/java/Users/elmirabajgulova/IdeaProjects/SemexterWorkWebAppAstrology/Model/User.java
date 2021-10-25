@@ -9,13 +9,13 @@ public class User {
     String password;
     String first_name;
     String last_name;
-    Date birth_date;
+    String birth_date;
 
 
     public User() {
     }
 
-    public User(int user_profile_id, String login, String password, String first_name, String last_name, Date birth_date) {
+    public User(int user_profile_id, String login, String password, String first_name, String last_name, String birth_date) {
         this.user_profile_id = user_profile_id;
         this.login = login;
         this.password = password;
@@ -24,7 +24,7 @@ public class User {
         this.birth_date = birth_date;
     }
 
-    public User(String login, String password, String first_name, String last_name, Date birth_date) {
+    public User(String login, String password, String first_name, String last_name, String birth_date) {
         this.login = login;
         this.password = password;
         this.first_name = first_name;
@@ -74,11 +74,11 @@ public class User {
         this.last_name = last_name;
     }
 
-    public Date getBirth_date() {
+    public String getBirth_date() {
         return birth_date;
     }
 
-    public void setBirth_date(Date birth_date) {
+    public void setBirth_date(String birth_date) {
         this.birth_date = birth_date;
     }
 

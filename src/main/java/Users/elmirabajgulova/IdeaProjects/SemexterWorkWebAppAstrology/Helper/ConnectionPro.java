@@ -1,20 +1,35 @@
 package Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Helper;
 import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 
 public class ConnectionPro {
-    private static Connection con;
 
-    public static Connection getConnection(){
-        try{
+    private static final String DATE_PATTERN = "yyyy-MM-dd";
+
+    public static Connection openConnection() {
+        try {
             Class.forName("org.postgresql.Driver");
-            con=DriverManager.getConnection("jdbc:postgresql://localhost:5433/AstrologyWebAppDatabase","postgres","postgres");
-
-        }catch(Exception e){
-            e.printStackTrace();
+            Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5433/AstrologyWebAppDatabase","postgres","postgres");
+            return c;
+        } catch (Exception ex) {
+            ex.printStackTrace();
         }
-        return con;
+        return null;
     }
+
+    public static String getFormattedDate(Date date) {
+        return new SimpleDateFormat(DATE_PATTERN).format(date);
+    }
+
+    public static Date getFormattedDate(String date) throws ParseException{
+        SimpleDateFormat sf = new SimpleDateFormat(DATE_PATTERN);
+        java.util.Date parsedDate = sf.parse(date);
+        return new Date(parsedDate.getTime());
+    }
+
 }
+
 
 

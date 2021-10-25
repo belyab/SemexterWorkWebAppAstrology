@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-
+<%@include file="/WEB-INF/top_nav.jsp" %>
 </body>
 </html>
