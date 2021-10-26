@@ -1,4 +1,5 @@
 package Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Helper;
+
 import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,7 +12,7 @@ public class ConnectionPro {
     public static Connection openConnection() {
         try {
             Class.forName("org.postgresql.Driver");
-            Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5433/AstrologyWebAppDatabase","postgres","postgres");
+            Connection c = DriverManager.getConnection("jdbc:postgresql://localhost:5433/AstrologyWebAppDatabase", "postgres", "postgres");
             return c;
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -23,7 +24,7 @@ public class ConnectionPro {
         return new SimpleDateFormat(DATE_PATTERN).format(date);
     }
 
-    public static Date getFormattedDate(String date) throws ParseException{
+    public static Date getFormattedDate(String date) throws ParseException {
         SimpleDateFormat sf = new SimpleDateFormat(DATE_PATTERN);
         java.util.Date parsedDate = sf.parse(date);
         return new Date(parsedDate.getTime());

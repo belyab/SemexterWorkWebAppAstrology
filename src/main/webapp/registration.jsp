@@ -11,9 +11,9 @@
 
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Register Account</title>
-  <link href="css/styleReg.css" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Register Account</title>
+    <link href="css/styleReg.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <%@include file="/WEB-INF/top_nav.jsp" %>
@@ -22,19 +22,22 @@
         <div class="title">
             Registration Form
         </div>
-        <div class = "alert-dangerous"> <label><%= Objects.toString(request.getAttribute(Keys.ERROR), "")%></label>
+        <div class="alert-dangerous"><label><%= Objects.toString(request.getAttribute(Keys.ERROR), "")%>
+        </label>
         </div>
         <form action="register" method="post">
             <div class="form_wrap">
                 <div class="input_grp">
                     <div class="input_wrap">
-                    <label>First Name</label>
-                    <input type="text" name="first_name" value="<%= Objects.toString(request.getParameter("first_name"), "")%>">
-                </div>
-                <div class="input_wrap">
-                    <label>Last Name</label>
-                    <input type="text" name="last_name" value="<%= Objects.toString(request.getParameter("last_name"), "")%>">
-                </div>
+                        <label>First Name</label>
+                        <input type="text" name="first_name"
+                               value="<%= Objects.toString(request.getParameter("first_name"), "")%>">
+                    </div>
+                    <div class="input_wrap">
+                        <label>Last Name</label>
+                        <input type="text" name="last_name"
+                               value="<%= Objects.toString(request.getParameter("last_name"), "")%>">
+                    </div>
                 </div>
                 <div class="input_wrap">
                     <label>Login</label>
@@ -42,11 +45,12 @@
                 </div>
                 <div class="input_wrap">
                     <label>Password</label>
-                    <input type="password" name="password" value="<%= Objects.toString(request.getParameter("password"), "")%>">
+                    <input type="password" name="password"
+                           value="<%= Objects.toString(request.getParameter("password"), "")%>">
                 </div>
                 <div class="input_wrap">
-                    <label style="display:block;">Birth date</label>
-                    <div class="reg-input">
+                    <label style="display:block;">Birthday</label>
+                    <div class="input_wrap">
                         <select name="day" id="days">
                             <option>Day</option>
                         </select>

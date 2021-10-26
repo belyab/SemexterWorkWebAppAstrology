@@ -46,10 +46,10 @@ public class RegistrationFormFilter implements Filter {
             } else {
                 chain.doFilter(request, response);
             }
-        } catch(Exception ex){
-                Logger.getLogger(RegistrationFormFilter.class.getName()).log(Level.SEVERE, null, ex);
-            }
+        } catch (Exception ex) {
+            Logger.getLogger(RegistrationFormFilter.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
 
     @Override
     public void destroy() {

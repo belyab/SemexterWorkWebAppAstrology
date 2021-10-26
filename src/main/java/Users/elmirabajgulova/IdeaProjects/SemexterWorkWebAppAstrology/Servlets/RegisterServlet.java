@@ -31,13 +31,13 @@ public class RegisterServlet extends HttpServlet {
             String year = request.getParameter("year").trim();
             RequestDispatcher dispatcher = request.getRequestDispatcher("registration.jsp");
             String birth_date = String.format("%s-%s-%s", day, month, year);
-                if (UserDao.saveUser(first_name, last_name, login, password, birth_date) == Validator.SUCCESS) {
-                    response.sendRedirect("login.jsp");
-                } else {
-                    request.setAttribute(Keys.ERROR, "Something wrong! Please, try again!");
-                    dispatcher.forward(request, response);
-                }
-            } catch (SQLException e) {
+            if (UserDao.saveUser(first_name, last_name, login, password, birth_date) == Validator.SUCCESS) {
+                response.sendRedirect("login.jsp");
+            } else {
+                request.setAttribute(Keys.ERROR, "Something wrong! Please, try again!");
+                dispatcher.forward(request, response);
+            }
+        } catch (SQLException e) {
             Logger.getLogger(RegisterServlet.class.getName()).log(Level.SEVERE, null, e);
         }
     }

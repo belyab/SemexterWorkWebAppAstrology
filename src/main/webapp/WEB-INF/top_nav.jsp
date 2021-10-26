@@ -1,3 +1,5 @@
+<%@ page import="Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Helper.Keys" %>
+<%@ page import="Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Model.User" %>
 <%--
   Created by IntelliJ IDEA.
   User: elmirabajgulova
@@ -9,15 +11,28 @@
     <a href="home.jsp"><img src="css/img/Astologo_PNG_white.png"></a>
     <div class="nav-links">
         <ul>
+
+            <%
+                User user = (User) session.getAttribute(Keys.USER);
+            %>
+
             <li><a href="home.jsp">HOME</a></li>
             <li><a href="horoscope.jsp">HOROSCOPE</a></li>
             <li><a href="astroservices.jsp">ASTROSERVICES</a></li>
             <li><a href="blog.jsp">BLOG</a></li>
+            <li><a href="profile.jsp">PROFILE</a></li>
             <li><a href="login.jsp">LOGIN</a></li>
             <div id="search-box">
                 <input type="text" name="search-friend">
                 <button><i class="fa fa-search"></i></button>
             </div>
+
+            <!--other <li> tags -->
+            <%if (session.getAttribute(Keys.USER) != null) {%>
+            <li>
+                <a href="logout"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+            </li>
+            <%}%>
         </ul>
     </div>
 </nav>
