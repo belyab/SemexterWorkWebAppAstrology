@@ -17,9 +17,6 @@
             <li><a href="astroservices.jsp">ASTROSERVICES</a></li>
             <li><a href="blog.jsp">BLOG</a></li>
             <li> <a href="profile.jsp">
-                <%
-                    User user = (User)session.getAttribute(Keys.USER);
-                %>
                 PROFILE
             </a></li>
             <li><a href="login.jsp">LOGIN</a></li>
@@ -28,12 +25,8 @@
                 <button><i class="fa fa-search"></i></button>
             </div>
 
-            <!--other <li> tags -->
-            <%if (session.getAttribute(Keys.USER) != null) {%>
-            <li>
-                <a href="logout">Logout</a>
-            </li>
-            <%}%>
+            ${sessionScope[Keys.USER] != null ? "<li><a href='logout'>Logout</a></li>" : ""}
+
         </ul>
     </div>
 </nav>

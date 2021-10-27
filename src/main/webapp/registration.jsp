@@ -22,7 +22,7 @@
         <div class="title">
             Registration Form
         </div>
-        <div class="alert-dangerous"><label><%= Objects.toString(request.getAttribute(Keys.ERROR), "")%>
+        <div class="alert-dangerous"><label>${requestScope[Keys.ERROR]}
         </label>
         </div>
         <form action="register" method="post">
@@ -31,22 +31,22 @@
                     <div class="input_wrap">
                         <label>First Name</label>
                         <input type="text" name="first_name"
-                               value="<%= Objects.toString(request.getParameter("first_name"), "")%>">
+                               value="${param["first_name"]}">
                     </div>
                     <div class="input_wrap">
                         <label>Last Name</label>
                         <input type="text" name="last_name"
-                               value="<%= Objects.toString(request.getParameter("last_name"), "")%>">
+                               value="${param["last_name"]}">
                     </div>
                 </div>
                 <div class="input_wrap">
                     <label>Login</label>
-                    <input type="text" name="login" value="<%= Objects.toString(request.getParameter("login"), "")%>">
+                    <input type="text" name="login" value="${param["login"]}">
                 </div>
                 <div class="input_wrap">
                     <label>Password</label>
                     <input type="password" name="password"
-                           value="<%= Objects.toString(request.getParameter("password"), "")%>">
+                           value="${param["password"]}">
                 </div>
                 <div class="input_wrap">
                     <label style="display:block;">Birthday</label>
@@ -69,19 +69,13 @@
             </div>
         </form>
     </div>
-<%--    <%--%>
-<%--        String[] birthday = user.getBirth_date().split("-");--%>
-<%--        String d = birthday[0];--%>
-<%--        String m = birthday[1];--%>
-<%--        String y = birthday[2];--%>
-<%--    %>--%>
 </div>
 
 <script>
     $(function () {
-        let day = "<%= Objects.toString(request.getParameter("day"), "")%>";
-        let month = "<%= Objects.toString(request.getParameter("month"))%>";
-        let year = "<%= Objects.toString(request.getParameter("year"))%>";
+        let day = "${param["day"]}";
+        let month = "${param["month"]}";
+        let year = "${param["year"]}";
         for (var i = 1; i <= 31; i++) {
             if (i == day)
                 $("#days").append("<option selected>" + i + "</option>");

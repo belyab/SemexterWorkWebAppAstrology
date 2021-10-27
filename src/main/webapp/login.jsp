@@ -22,7 +22,7 @@
             Login
         </div>
         <form action="login" method="post">
-            <div class="alert-dangerous"><label><%= Objects.toString(request.getAttribute(Keys.ERROR), "")%>
+            <div class="alert-dangerous"><label>${sessionScope[Keys.ERROR]}
             </label>
             </div>
             <div class="form_wrap">

@@ -8,6 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib uri="/WEB-INF/tlds/custom.tld" prefix="dates" %>
 <html>
 <head>
     <link rel="stylesheet" href="css/styleProfile.css">
@@ -31,27 +32,25 @@
                             <h4>Overview</h4>
                             <div class="overview-form">
                                 <div class="alert-danger">
-                                    <%= Objects.toString(session.getAttribute(Keys.ERROR), "")  %>
-                                </div>
+                                    ${sessionScope[Keys.ERROR]}                                </div>
                                 <div class="alert-success">
-                                    <%= Objects.toString(session.getAttribute(Keys.SUCCESS), "")  %>
-                                </div>
+                                    ${sessionScope[Keys.SUCCESS]}                                </div>
                                 <form action="profile" method="post">
                                     <label>First Name:</label>
                                     <input required type="text" name="first_name"
-                                           value="<%= user.getFirst_name()%>"/>
+                                           value="${sessionScope[Keys.USER].first_name}"/>
 
                                     <label>Last Name:</label>
                                     <input required type="text" name="last_name"
-                                           value="<%= user.getLast_name() %>"/>
+                                           value="${sessionScope[Keys.USER].last_name}"/>
 
                                     <label>Login:</label>
                                     <input required type="text" name="login"
-                                           value="<%= user.getLogin() %>"/>
+                                           value="${sessionScope[Keys.USER].login}"/>
 
                                     <label>Password:</label>
                                     <input required type="password" name="password"
-                                           value="<%=user.getPassword() %>"/>
+                                           value="${sessionScope[Keys.USER].password}"/>
 
                                     <label style="display:block;">Birthday</label>
                                     <div class="reg-input">
@@ -78,33 +77,24 @@
             </div>
         </div>
     </div>
-    <%
-        String[] birthday = user.getBirth_date().split("-");
-        String d = birthday[0];
-        String m = birthday[1];
-        String y = birthday[2];
-    %>
 </section>
 <script>
     $(function () {
-        let day = "<%= d %>";
-        let month = "<%= m %>";
-        let year = "<%= y %>";
+        let day = "${dates:getDateParts(sessionScope[Keys.USER].birth_date)[0]}";
+        let month = "${dates:getDateParts(sessionScope[Keys.USER].birth_date)[1]}";
+        let year = "${dates:getDateParts(sessionScope[Keys.USER].birth_date)[2]}";
         for (var i = 1; i <= 31; i++) {
             if (i == day) $("#days").append("<option selected>" + i + "</option>");
             else $("#days").append("<option>" + i + "</option>");
         }
         for (var i = 1; i <= 12; i++) {
-            if (i == month) $("#months").append("<option selected>" + i + "</option>");
+            if (i == month )$("#months").append("<option selected>" + i + "</option>");
             else $("#months").append("<option>" + i + "</option>");
         }
         for (var i = 2016; i >= 1905; i--) {
             if (i == year) $("#years").append("<option selected>" + i + "</option>");
             else $("#years").append("<option>" + i + "</option>");
         }
-
-        var viewportHeight = $(window).height();
-        $("#online-list").css("max-height", viewportHeight);
     });
 </script>
 
