@@ -69,6 +69,12 @@
             </div>
         </form>
     </div>
+<%--    <%--%>
+<%--        String[] birthday = user.getBirth_date().split("-");--%>
+<%--        String d = birthday[0];--%>
+<%--        String m = birthday[1];--%>
+<%--        String y = birthday[2];--%>
+<%--    %>--%>
 </div>
 
 <script>

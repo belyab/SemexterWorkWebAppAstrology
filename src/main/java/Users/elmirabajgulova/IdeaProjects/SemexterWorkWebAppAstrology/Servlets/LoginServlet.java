@@ -27,7 +27,13 @@ public class LoginServlet extends HttpServlet {
             User user = UserDao.checkLogin(login, password);
             if (user != null) {
                 session.setAttribute(Keys.USER, user);
-                response.sendRedirect("home");
+                if (session.getAttribute(Keys.CURRENT_URL) == null) {
+                    response.sendRedirect("home");
+                } else {
+                    String curUrl = session.getAttribute(Keys.CURRENT_URL).toString();
+                    session.setAttribute(Keys.CURRENT_URL, null);
+                    response.sendRedirect(curUrl);
+                }
                 session.setAttribute(Keys.ERROR, "");
             } else {
                 session.setAttribute(Keys.ERROR, "Invalid login information");

@@ -8,4 +8,5 @@
 /Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Servlets/HomeServlet.java
 /Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Filters/RegistrationFormFilter.java
 /Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Servlets/LogoutServlet.java
+/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Filters/RequiredLoginFilter.java
 /Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/src/main/java/Users/elmirabajgulova/IdeaProjects/SemexterWorkWebAppAstrology/Helper/ConnectionPro.java

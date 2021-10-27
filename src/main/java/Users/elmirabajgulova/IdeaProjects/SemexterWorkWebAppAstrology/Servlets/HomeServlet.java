@@ -15,13 +15,9 @@ public class HomeServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
-        HttpSession session = request.getSession();
-        if (session.getAttribute(Keys.USER) != null) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
-            dispatcher.forward(request, response);
-        } else {
-            response.sendRedirect("login.jsp");
-        }
+
+       RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
+       requestDispatcher.forward(request,response);
     }
 
 

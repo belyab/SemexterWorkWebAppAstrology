@@ -52,13 +52,8 @@ public class ProfileServlet extends HttpServlet {
                 Logger.getLogger(ProfileServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-
-        if (sess.getAttribute(Keys.USER) != null) {
-            RequestDispatcher dis = request.getRequestDispatcher("profile.jsp");
-            dis.forward(request, response);
-        } else { // not logged in
-            response.sendRedirect("login.jsp");
-        }
+        RequestDispatcher dis = request.getRequestDispatcher("WEB-INF/profile.jsp");
+        dis.forward(request, response);
     }
 
 

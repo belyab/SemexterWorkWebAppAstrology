@@ -11,6 +11,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="css/styleProfile.css">
+    <link href="css/styleLog.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <%@include file="/WEB-INF/top_nav.jsp" %>
@@ -68,6 +69,7 @@
                                     <button name="action" value="update-profile"
                                             type="submit">Save Changes
                                     </button>
+
                                 </form>
                             </div>
                         </div>

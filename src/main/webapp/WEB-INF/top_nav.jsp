@@ -12,15 +12,16 @@
     <div class="nav-links">
         <ul>
 
-            <%
-                User user = (User) session.getAttribute(Keys.USER);
-            %>
-
             <li><a href="home.jsp">HOME</a></li>
             <li><a href="horoscope.jsp">HOROSCOPE</a></li>
             <li><a href="astroservices.jsp">ASTROSERVICES</a></li>
             <li><a href="blog.jsp">BLOG</a></li>
-            <li><a href="profile.jsp">PROFILE</a></li>
+            <li> <a href="profile.jsp">
+                <%
+                    User user = (User)session.getAttribute(Keys.USER);
+                %>
+                PROFILE
+            </a></li>
             <li><a href="login.jsp">LOGIN</a></li>
             <div id="search-box">
                 <input type="text" name="search-friend">
@@ -30,7 +31,7 @@
             <!--other <li> tags -->
             <%if (session.getAttribute(Keys.USER) != null) {%>
             <li>
-                <a href="logout"><i class="fa fa-power-off" aria-hidden="true"></i></a>
+                <a href="logout">Logout</a>
             </li>
             <%}%>
         </ul>
