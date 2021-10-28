@@ -9,14 +9,14 @@ public class UserDao {
 
 
     //for register user
-    public static int saveUser(String login, String password, String first_name, String last_name, String birth_date) throws SQLException {
-        String query = "insert into user_profile(login,password,first_name,last_name,birth_date) values(?,?,?,?,?)";
+    public static int saveUser(String first_name, String last_name, String login, String password, String birth_date) throws SQLException {
+        String query = "insert into user_profile(first_name,last_name,login,password,birth_date) values(?,?,?,?,?)";
         try (Connection connection = ConnectionPro.openConnection();
              PreparedStatement pt = connection.prepareStatement(query)) {
-            pt.setString(1, login);
-            pt.setString(2, password);
-            pt.setString(3, first_name);
-            pt.setString(4, last_name);
+            pt.setString(1, first_name);
+            pt.setString(2, last_name);
+            pt.setString(3, login);
+            pt.setString(4, password);
             pt.setString(5, birth_date);
             return pt.executeUpdate();
         }
