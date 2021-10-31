@@ -60,25 +60,26 @@
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-aquarius-100.png">
             <div class="layer">
-                <h3>AQUARIUS</h3>
+                <h3><a href="aquarius.jsp" class="hero-btn">AQUARIUS</a></h3>
             </div>
         </div>
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-aries-100.png">
             <div class="layer">
-                <h3>ARIES</h3>
+<%--                <a href="Zodiac%20signs%20pages/aries.jsp" class="hero-btn">LOGIN</a>--%>
+                <h3><a href="aries.jsp" class="hero-btn">ARIES</a></h3>
             </div>
         </div>
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-cancer-100.png">
             <div class="layer">
-                <h3>CANCER</h3>
+                <h3><a href="cancer.jsp" class="hero-btn">CANCER</a></h3>
             </div>
         </div>
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-capricorn-100.png">
             <div class="layer">
-                <h3>CAPRICORN</h3>
+                <h3><a href="capricorn.jsp" class="hero-btn">CAPRICORN</a></h3>
             </div>
         </div>
     </div>
@@ -86,25 +87,25 @@
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-gemini-100.png">
             <div class="layer">
-                <h3>GEMINI</h3>
+                <h3><a href="gemini.jsp" class="hero-btn">GEMINI</a></h3>
             </div>
         </div>
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-leo-100.png">
             <div class="layer">
-                <h3>LEO</h3>
+                <h3><a href="leo.jsp" class="hero-btn">LEO</a></h3>
             </div>
         </div>
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-libra-100.png">
             <div class="layer">
-                <h3>LIBRA</h3>
+                <h3><a href="libra.jsp" class="hero-btn">LIBRA</a></h3>
             </div>
         </div>
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-pisces-100.png">
             <div class="layer">
-                <h3>PISCES</h3>
+                <h3><a href="pisces.jsp" class="hero-btn">PISCES</a></h3>
             </div>
         </div>
     </div>
@@ -112,25 +113,25 @@
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-sagittarius-100.png">
             <div class="layer">
-                <h3>SAGITTARIUS</h3>
+                <h3><a href="sagittarius.jsp" class="hero-btn">SAGITTARIUS</a></h3>
             </div>
         </div>
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-scorpio-100.png">
             <div class="layer">
-                <h3>SCORPIO</h3>
+                <h3><a href="scorpio.jsp" class="hero-btn">SCORPIO</a></h3>
             </div>
         </div>
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-taurus-100.png">
             <div class="layer">
-                <h3>TAURUS</h3>
+                <h3><a href="taurus.jsp" class="hero-btn">TAURUS</a></h3>
             </div>
         </div>
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-virgo-100.png">
             <div class="layer">
-                <h3>VIRGO</h3>
+                <h3><a href="virgo.jsp" class="hero-btn">VIRGO</a></h3>
             </div>
         </div>
     </div>

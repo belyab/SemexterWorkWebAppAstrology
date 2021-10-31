@@ -14,6 +14,24 @@
 </head>
 <body>
 
+<%
+    String login="",pas="",rem="";
+    Cookie[] cookies = request.getCookies();
+    if(cookies!=null){
+        for(Cookie cookie : cookies){
+            if(cookie.getName().equals("cookieLog")) {
+                login = cookie.getValue();
+
+            } else if (cookie.getName().equals("cookiePass")){
+                pas = cookie.getValue();
+
+            } else if (cookie.getName().equals("cookieRem")){
+                rem = cookie.getValue();
+            }
+        }
+    }
+%>
+
 
 <%@include file="/WEB-INF/top_nav.jsp" %>
 <div class="wrapper">
@@ -28,17 +46,22 @@
             <div class="form_wrap">
                 <div class="input_wrap">
                     <label>Login</label>
-                    <input type="text" name="user-login-id">
+                    <input type="text" name="user-login-id" value="<%=login%>">
                 </div>
                 <div class="input_wrap">
                     <label>Password</label>
-                    <input type="password" name="user-login-password">
+                    <input type="password" name="user-login-password" value="<%=pas%>">
                 </div>
+
+                <div class="input_wrap">
+                   <label> Remember me:</label> <input type="checkbox" name="remember" value="1"
+                                        <%="1".equals(rem) ? "checked='/checked'" : "" %> >
+                </div>
+
                 <div class="input_wrap">
                     <input type="submit" value="Login" class="submit_btn">
                 </div>
                 <a href="registration.jsp">Create New Account</a>
-
             </div>
         </form>
     </div>

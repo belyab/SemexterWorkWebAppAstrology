@@ -52,7 +52,7 @@ public class ProfileServlet extends HttpServlet {
                 Logger.getLogger(ProfileServlet.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        RequestDispatcher dis = request.getRequestDispatcher("WEB-INF/profile.jsp");
+        RequestDispatcher dis = request.getRequestDispatcher("profile.jsp");
         dis.forward(request, response);
     }
 

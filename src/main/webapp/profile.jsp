@@ -25,16 +25,18 @@
                 </div>
                 <div class="profile-body-content">
                     <div class="row no-pad">
-                        <div class="col-md-4 profile-body-content-tool no-pad">
-                            <a href="/" class="active">Overview</a>
-                        </div>
                         <div class="col-md-8 profile-body-content-editing">
-                            <h4>Overview</h4>
                             <div class="overview-form">
                                 <div class="alert-danger">
-                                    ${sessionScope[Keys.ERROR]}                                </div>
+                                    <label>
+                                    ${sessionScope[Keys.ERROR]}
+                                    </label>
+                                </div>
                                 <div class="alert-success">
-                                    ${sessionScope[Keys.SUCCESS]}                                </div>
+                                    <label>
+                                    ${sessionScope[Keys.SUCCESS]}
+                                        </label>
+                                </div>
                                 <form action="profile" method="post">
                                     <label>First Name:</label>
                                     <input required type="text" name="first_name"

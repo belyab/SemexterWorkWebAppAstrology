@@ -219,9 +219,10 @@ h3 {
     text-align: left;
 }
 
-.sub-header {
+.sub-header{
     height: 50vh;
     width: 100%;
+    /*background-color: #84889c;*/
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("img/LAT_Antaal_Icono.jpeg");
     background-position: center;
     background-size: cover;
@@ -232,6 +233,8 @@ h3 {
 .sub-header h1 {
     margin-top: 100px;
 }
+
+
 
 
 
