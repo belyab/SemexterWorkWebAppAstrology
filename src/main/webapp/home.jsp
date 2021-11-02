@@ -65,7 +65,6 @@
         <div class="signs-col">
             <img src="css/img/signsImages/icons8-aries-100.png">
             <div class="layer">
-<%--                <a href="Zodiac%20signs%20pages/aries.jsp" class="hero-btn">LOGIN</a>--%>
                 <h3><a href="aries.jsp" class="hero-btn">ARIES</a></h3>
             </div>
         </div>

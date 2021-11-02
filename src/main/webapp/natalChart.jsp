@@ -17,7 +17,7 @@
 <body>
 <section class="sub-header">
     <%@include file="/WEB-INF/top_nav.jsp" %>
-    <h1>Astrocervices</h1>
+    <h1>Natal chart</h1>
 </section>
 <script>
     var widgetApp = "apro";

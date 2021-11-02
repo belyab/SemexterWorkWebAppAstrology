@@ -21,15 +21,12 @@
             <li><a href="home.jsp">HOME</a></li>
             <li><a href="prediction.jsp">PREDICTION</a></li>
             <li><a href="slider.jsp">SLIDER</a></li>
+            <li><a href="searching.jsp">SEARCH</a></li>
             <li><a href="horoscope.jsp">HOROSCOPE</a></li>
             <li><a href="natalChart.jsp">NATAL CHART</a></li>
-            <li><a href="blog.jsp">BLOG</a></li>
             ${sessionScope[Keys.USER] != null ? "<li> <a href='profile.jsp'>PROFILE</a></li>" : ""}
             <li><a href="login.jsp">LOGIN</a></li>
-            <div id="search-box">
-                <input type="text" name="search-friend">
-                <button><i class="fa fa-search"></i></button>
-            </div>
+
 
             ${sessionScope[Keys.USER] != null ? "<li><a href='logout'>Logout</a></li>" : ""}
 

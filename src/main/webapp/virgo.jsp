@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="css/styleZodiacSignsPages.css">
 </head>
 <body>
-<%@include file="/WEB-INF/top_nav.jsp" %>
+<section class="sub-header">
+    <%@include file="/WEB-INF/top_nav.jsp" %>
+    <h1>Virgo</h1>
+
+</section>
 <h1>Virgo</h1>
 <div class="grid__content">
     <div class="editorial-article__feed">

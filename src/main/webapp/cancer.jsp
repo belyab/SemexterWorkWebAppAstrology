@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="css/styleZodiacSignsPages.css">
 </head>
 <body>
-<%@include file="/WEB-INF/top_nav.jsp" %>
+<section class="sub-header">
+    <%@include file="/WEB-INF/top_nav.jsp" %>
+    <h1>Cancer</h1>
+
+</section>
 <div class="grid__content">
     <h1>Cancer</h1>
 

@@ -14,7 +14,11 @@
 </head>
 <body>
 <h1>Sagittarius</h1>
-<%@include file="/WEB-INF/top_nav.jsp" %>
+<section class="sub-header">
+    <%@include file="/WEB-INF/top_nav.jsp" %>
+    <h1>Sagittarius</h1>
+
+</section>
 <div class="grid__content">
     <div class="editorial-article__feed">
         <h2>Sagittarius Traits &amp; Overview</h2>
