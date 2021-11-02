@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleHome.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -162,6 +161,7 @@
     </div>
 
 </section>
+
 
 
 </body>

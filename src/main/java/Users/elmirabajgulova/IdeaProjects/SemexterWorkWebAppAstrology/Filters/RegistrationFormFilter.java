@@ -38,10 +38,14 @@ public class RegistrationFormFilter implements Filter {
                 request.setAttribute(Keys.ERROR, "Last name is incorrect");
                 dispatcher.forward(request, response);
             } else if (!Validator.checkLogin(login)) {
-                request.setAttribute(Keys.ERROR, "Login is incorrect");
+                request.setAttribute(Keys.ERROR, "Login is incorrect. login must contain from 3 to 15 characters, lowercase letters\n" +
+                        "     * of the English alphabet, numbers, dashes and\n" +
+                        "     * underscores can be used as characters");
                 dispatcher.forward(request, response);
             } else if (!Validator.checkPassword(password)) {
-                request.setAttribute(Keys.ERROR, "Password is incorrect");
+                request.setAttribute(Keys.ERROR, "Password is incorrect.At least 4 chars, max 8 chars\n" +
+                        "     * Contains at least one digit\n" +
+                        "     * Contains at least one upper alpha char");
                 dispatcher.forward(request, response);
             } else {
                 chain.doFilter(request, response);

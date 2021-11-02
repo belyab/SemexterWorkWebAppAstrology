@@ -19,5 +19,10 @@
     <%@include file="/WEB-INF/top_nav.jsp" %>
     <h1>Horoscope</h1>
 </section>
+<script>
+    var widgetApp = "astronline";
+    var widgetLanguage = "en";
+</script>
+<script src="https://astromix.net/js/widget.js"></script>
 </body>
 </html>

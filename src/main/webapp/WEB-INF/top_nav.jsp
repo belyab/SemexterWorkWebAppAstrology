@@ -12,12 +12,15 @@
     <meta name="viewport" content="with=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styleHome.css">
 </head>
+
 <nav>
     <a href="home.jsp"><img src="css/img/Astologo_PNG_white.png"></a>
     <div class="nav-links">
         <ul>
 
             <li><a href="home.jsp">HOME</a></li>
+            <li><a href="prediction.jsp">PREDICTION</a></li>
+            <li><a href="slider.jsp">SLIDER</a></li>
             <li><a href="horoscope.jsp">HOROSCOPE</a></li>
             <li><a href="natalChart.jsp">NATAL CHART</a></li>
             <li><a href="blog.jsp">BLOG</a></li>

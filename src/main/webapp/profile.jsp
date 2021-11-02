@@ -1,3 +1,4 @@
+
 <%@ page import="Users.elmirabajgulova.IdeaProjects.SemexterWorkWebAppAstrology.Model.User" %>
 <%@ page import="java.util.Objects" %>
 <%--
@@ -29,13 +30,13 @@
                             <div class="overview-form">
                                 <div class="alert-danger">
                                     <label>
-                                    ${sessionScope[Keys.ERROR]}
+                                        ${sessionScope[Keys.ERROR]}
                                     </label>
                                 </div>
                                 <div class="alert-success">
                                     <label>
-                                    ${sessionScope[Keys.SUCCESS]}
-                                        </label>
+                                        ${sessionScope[Keys.SUCCESS]}
+                                    </label>
                                 </div>
                                 <form action="profile" method="post">
                                     <label>First Name:</label>
